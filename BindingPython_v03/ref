@@ -1,0 +1,75 @@
+# reference counting
+Py_INCREF( PyObject* o ) 
+Py_DECREF( PyObject* o )
+Py_CLEAR( PyObject* o )
+
+# Exceptions
+PyErr_Occurred()
+PyErr_Clear()
+PyErr_SetString()
+
+# basic initialization
+Py_Initialize()
+Py_Finalize()
+
+
+
+
+PyObject* Py_CompileString(const char *str, const char *filename, int start)
+Return value: New reference.
+
+PyObject* PyEval_EvalCode(PyCodeObject *co, PyObject *globals, PyObject *locals)
+Return value: New reference.
+
+# Tuple Object
+int PyTuple_Check(PyObject *p)
+int PyTuple_CheckExact(PyObject *p)
+PyObject* PyTuple_New(Py_ssize_t len)
+PyObject* PyTuple_Pack(Py_ssize_t n, ...)
+Py_ssize_t PyTuple_Size(PyObject *p)
+Py_ssize_t PyTuple_GET_SIZE(PyObject *p)
+PyObject* PyTuple_GetItem(PyObject *p, Py_ssize_t pos)
+PyObject* PyTuple_GET_ITEM(PyObject *p, Py_ssize_t pos)
+PyObject* PyTuple_GetSlice(PyObject *p, Py_ssize_t low, Py_ssize_t high)
+int PyTuple_SetItem(PyObject *p, Py_ssize_t pos, PyObject *o)
+void PyTuple_SET_ITEM(PyObject *p, Py_ssize_t pos, PyObject *o)
+int _PyTuple_Resize(PyObject **p, Py_ssize_t newsize)
+int PyTuple_ClearFreeList()
+
+# List Object
+PyTypeObject PyList_Type
+int PyList_Check(PyObject *p);
+int PyList_CheckExact(PyObject *p)
+PyObject* PyList_New(Py_ssize_t len)
+Py_ssize_t PyList_Size(PyObject *list)
+Py_ssize_t PyList_GET_SIZE(PyObject *list)
+PyObject* PyList_GetItem(PyObject *list, Py_ssize_t index)
+PyObject* PyList_GET_ITEM(PyObject *list, Py_ssize_t i)
+int PyList_SetItem(PyObject *list, Py_ssize_t index, PyObject *item)
+void PyList_SET_ITEM(PyObject *list, Py_ssize_t i, PyObject *o)
+int PyList_Insert(PyObject *list, Py_ssize_t index, PyObject *item)
+int PyList_Append(PyObject *list, PyObject *item)
+PyObject* PyList_GetSlice(PyObject *list, Py_ssize_t low, Py_ssize_t high)
+int PyList_SetSlice(PyObject *list, Py_ssize_t low, Py_ssize_t high, PyObject *itemlist)
+int PyList_Sort(PyObject *list)
+int PyList_Reverse(PyObject *list)
+PyObject* PyList_AsTuple(PyObject *list)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
